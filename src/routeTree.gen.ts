@@ -10,33 +10,323 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AccessibilityRouteImport } from './routes/accessibility'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as ComplaintsRouteImport } from './routes/complaints'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as CoveragePlannerRouteImport } from './routes/coverage-planner'
+import { Route as DeliveryModelRouteImport } from './routes/delivery-model'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as QualityStandardsRouteImport } from './routes/quality-standards'
+import { Route as RequestQuoteRouteImport } from './routes/request-quote'
+import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as TechnologyRouteImport } from './routes/technology'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as TrustRouteImport } from './routes/trust'
+import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
+import { Route as IndustriesIndustryRouteImport } from './routes/industries.$industry'
+import { Route as ServiceServiceRouteImport } from './routes/service.$service'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesCategoryRouteImport } from './routes/services.$category'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccessibilityRoute = AccessibilityRouteImport.update({
+  id: '/accessibility',
+  path: '/accessibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComplaintsRoute = ComplaintsRouteImport.update({
+  id: '/complaints',
+  path: '/complaints',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoveragePlannerRoute = CoveragePlannerRouteImport.update({
+  id: '/coverage-planner',
+  path: '/coverage-planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeliveryModelRoute = DeliveryModelRouteImport.update({
+  id: '/delivery-model',
+  path: '/delivery-model',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QualityStandardsRoute = QualityStandardsRouteImport.update({
+  id: '/quality-standards',
+  path: '/quality-standards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestQuoteRoute = RequestQuoteRouteImport.update({
+  id: '/request-quote',
+  path: '/request-quote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TechnologyRoute = TechnologyRouteImport.update({
+  id: '/technology',
+  path: '/technology',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustRoute = TrustRouteImport.update({
+  id: '/trust',
+  path: '/trust',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
+  id: '/industries/',
+  path: '/industries/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesIndustryRoute = IndustriesIndustryRouteImport.update({
+  id: '/industries/$industry',
+  path: '/industries/$industry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiceServiceRoute = ServiceServiceRouteImport.update({
+  id: '/service/$service',
+  path: '/service/$service',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesCategoryRoute = ServicesCategoryRouteImport.update({
+  id: '/services/$category',
+  path: '/services/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/careers': typeof CareersRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/coverage-planner': typeof CoveragePlannerRoute
+  '/delivery-model': typeof DeliveryModelRoute
+  '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/quality-standards': typeof QualityStandardsRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/sitemap': typeof SitemapRoute
+  '/technology': typeof TechnologyRoute
+  '/terms': typeof TermsRoute
+  '/trust': typeof TrustRoute
+  '/industries/$industry': typeof IndustriesIndustryRoute
+  '/service/$service': typeof ServiceServiceRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/careers': typeof CareersRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/coverage-planner': typeof CoveragePlannerRoute
+  '/delivery-model': typeof DeliveryModelRoute
+  '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/quality-standards': typeof QualityStandardsRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/sitemap': typeof SitemapRoute
+  '/technology': typeof TechnologyRoute
+  '/terms': typeof TermsRoute
+  '/trust': typeof TrustRoute
+  '/industries/$industry': typeof IndustriesIndustryRoute
+  '/service/$service': typeof ServiceServiceRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/industries': typeof IndustriesIndexRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/accessibility': typeof AccessibilityRoute
+  '/careers': typeof CareersRoute
+  '/complaints': typeof ComplaintsRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
+  '/coverage-planner': typeof CoveragePlannerRoute
+  '/delivery-model': typeof DeliveryModelRoute
+  '/faq': typeof FaqRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/privacy': typeof PrivacyRoute
+  '/quality-standards': typeof QualityStandardsRoute
+  '/request-quote': typeof RequestQuoteRoute
+  '/sitemap': typeof SitemapRoute
+  '/technology': typeof TechnologyRoute
+  '/terms': typeof TermsRoute
+  '/trust': typeof TrustRoute
+  '/industries/$industry': typeof IndustriesIndustryRoute
+  '/service/$service': typeof ServiceServiceRoute
+  '/services/$category': typeof ServicesCategoryRoute
+  '/industries/': typeof IndustriesIndexRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/accessibility'
+    | '/careers'
+    | '/complaints'
+    | '/contact'
+    | '/cookies'
+    | '/coverage-planner'
+    | '/delivery-model'
+    | '/faq'
+    | '/how-it-works'
+    | '/privacy'
+    | '/quality-standards'
+    | '/request-quote'
+    | '/sitemap'
+    | '/technology'
+    | '/terms'
+    | '/trust'
+    | '/industries/$industry'
+    | '/service/$service'
+    | '/services/$category'
+    | '/industries/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/accessibility'
+    | '/careers'
+    | '/complaints'
+    | '/contact'
+    | '/cookies'
+    | '/coverage-planner'
+    | '/delivery-model'
+    | '/faq'
+    | '/how-it-works'
+    | '/privacy'
+    | '/quality-standards'
+    | '/request-quote'
+    | '/sitemap'
+    | '/technology'
+    | '/terms'
+    | '/trust'
+    | '/industries/$industry'
+    | '/service/$service'
+    | '/services/$category'
+    | '/industries'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/accessibility'
+    | '/careers'
+    | '/complaints'
+    | '/contact'
+    | '/cookies'
+    | '/coverage-planner'
+    | '/delivery-model'
+    | '/faq'
+    | '/how-it-works'
+    | '/privacy'
+    | '/quality-standards'
+    | '/request-quote'
+    | '/sitemap'
+    | '/technology'
+    | '/terms'
+    | '/trust'
+    | '/industries/$industry'
+    | '/service/$service'
+    | '/services/$category'
+    | '/industries/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AccessibilityRoute: typeof AccessibilityRoute
+  CareersRoute: typeof CareersRoute
+  ComplaintsRoute: typeof ComplaintsRoute
+  ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
+  CoveragePlannerRoute: typeof CoveragePlannerRoute
+  DeliveryModelRoute: typeof DeliveryModelRoute
+  FaqRoute: typeof FaqRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  PrivacyRoute: typeof PrivacyRoute
+  QualityStandardsRoute: typeof QualityStandardsRoute
+  RequestQuoteRoute: typeof RequestQuoteRoute
+  SitemapRoute: typeof SitemapRoute
+  TechnologyRoute: typeof TechnologyRoute
+  TermsRoute: typeof TermsRoute
+  TrustRoute: typeof TrustRoute
+  IndustriesIndustryRoute: typeof IndustriesIndustryRoute
+  ServiceServiceRoute: typeof ServiceServiceRoute
+  ServicesCategoryRoute: typeof ServicesCategoryRoute
+  IndustriesIndexRoute: typeof IndustriesIndexRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +338,187 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accessibility': {
+      id: '/accessibility'
+      path: '/accessibility'
+      fullPath: '/accessibility'
+      preLoaderRoute: typeof AccessibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complaints': {
+      id: '/complaints'
+      path: '/complaints'
+      fullPath: '/complaints'
+      preLoaderRoute: typeof ComplaintsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coverage-planner': {
+      id: '/coverage-planner'
+      path: '/coverage-planner'
+      fullPath: '/coverage-planner'
+      preLoaderRoute: typeof CoveragePlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/delivery-model': {
+      id: '/delivery-model'
+      path: '/delivery-model'
+      fullPath: '/delivery-model'
+      preLoaderRoute: typeof DeliveryModelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quality-standards': {
+      id: '/quality-standards'
+      path: '/quality-standards'
+      fullPath: '/quality-standards'
+      preLoaderRoute: typeof QualityStandardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-quote': {
+      id: '/request-quote'
+      path: '/request-quote'
+      fullPath: '/request-quote'
+      preLoaderRoute: typeof RequestQuoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/technology': {
+      id: '/technology'
+      path: '/technology'
+      fullPath: '/technology'
+      preLoaderRoute: typeof TechnologyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trust': {
+      id: '/trust'
+      path: '/trust'
+      fullPath: '/trust'
+      preLoaderRoute: typeof TrustRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/': {
+      id: '/industries/'
+      path: '/industries'
+      fullPath: '/industries/'
+      preLoaderRoute: typeof IndustriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/$industry': {
+      id: '/industries/$industry'
+      path: '/industries/$industry'
+      fullPath: '/industries/$industry'
+      preLoaderRoute: typeof IndustriesIndustryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/service/$service': {
+      id: '/service/$service'
+      path: '/service/$service'
+      fullPath: '/service/$service'
+      preLoaderRoute: typeof ServiceServiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$category': {
+      id: '/services/$category'
+      path: '/services/$category'
+      fullPath: '/services/$category'
+      preLoaderRoute: typeof ServicesCategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AccessibilityRoute: AccessibilityRoute,
+  CareersRoute: CareersRoute,
+  ComplaintsRoute: ComplaintsRoute,
+  ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
+  CoveragePlannerRoute: CoveragePlannerRoute,
+  DeliveryModelRoute: DeliveryModelRoute,
+  FaqRoute: FaqRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  PrivacyRoute: PrivacyRoute,
+  QualityStandardsRoute: QualityStandardsRoute,
+  RequestQuoteRoute: RequestQuoteRoute,
+  SitemapRoute: SitemapRoute,
+  TechnologyRoute: TechnologyRoute,
+  TermsRoute: TermsRoute,
+  TrustRoute: TrustRoute,
+  IndustriesIndustryRoute: IndustriesIndustryRoute,
+  ServiceServiceRoute: ServiceServiceRoute,
+  ServicesCategoryRoute: ServicesCategoryRoute,
+  IndustriesIndexRoute: IndustriesIndexRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
