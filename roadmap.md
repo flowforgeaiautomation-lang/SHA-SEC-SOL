@@ -1,6 +1,6 @@
 # MSS delivery roadmap
 
-- [ ] Requested polish: remove repeated editorial disclaimers, broaden enquiry wording to India/worldwide, strengthen language switching, improve readability, loading, motion and existing logo.
+- [x] Requested polish: remove repeated editorial disclaimers, broaden enquiry wording to India/worldwide, strengthen language switching, improve readability, loading, motion and existing logo.
 
 - [x] Public website: simple India-first home, shared navigation, service catalogue/detail pages, industry pages, company story, delivery process, quality/trust, FAQs, careers and policy pages.
 - [x] English, Hindi and Gujarati visitor experience; professional translation review still required.
