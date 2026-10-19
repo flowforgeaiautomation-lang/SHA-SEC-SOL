@@ -8,6 +8,13 @@
       "when": 1791997903700,
       "tag": "0000_create_private_public_enquiries",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792391632909,
+      "tag": "0001_mss_authorized_enquiry_management",
+      "breakpoints": true
     }
   ]
 }
