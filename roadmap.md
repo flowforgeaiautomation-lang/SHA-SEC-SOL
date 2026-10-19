@@ -1,5 +1,14 @@
 # MSS delivery roadmap
 
+## Master implementation order
+- [ ] Centered text-only MSS brand, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
+- [ ] Planner first on homepage; preserve supplied planner copy and working calculations.
+- [ ] Real Pexels photography with secure credentials, cached assets and attribution.
+- [ ] Short global enquiry, international phone validation, career/complaint flows.
+- [ ] Private authorized enquiry management: status, notes, follow-ups, search, audit history and export.
+- [ ] Verify languages, mobile layouts, stored enquiries, access isolation and available checks.
+- [ ] Team notifications and genuine telephone/WhatsApp actions: blocked by sender domain and verified phone numbers.
+
 - [x] Requested polish: remove repeated editorial disclaimers, broaden enquiry wording to India/worldwide, strengthen language switching, improve readability, loading, motion and existing logo.
 
 - [x] Public website: simple India-first home, shared navigation, service catalogue/detail pages, industry pages, company story, delivery process, quality/trust, FAQs, careers and policy pages.

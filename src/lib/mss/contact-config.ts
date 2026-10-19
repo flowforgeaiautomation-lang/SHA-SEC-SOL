@@ -1,0 +1,1 @@
+export const contactConfig: { phone: string | null; whatsapp: string | null } = { phone: null, whatsapp: null };
