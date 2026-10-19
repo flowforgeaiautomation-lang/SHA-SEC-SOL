@@ -1,14 +1,19 @@
-# Welcome to your Lovable project
+# Mahavirsecuritysolutions
+
+NOW CREATE PERFECT, SIMPLER, EXACTLY , DONOT FDORGET ANYTHING , LIST ALL HTINGS , MAKE IT ATTRCATIVE AND FULLY TUSTRABLE AND PUT ALL SERVICES TO ATTRACT MORE AN DMORE USERS AND MAKE IT FOR INDIA SPEACICFICALLY SO USE INDIAN VISUALS ACCORDING TO THIS BUT MAKE THE WEBSITE PERFECT BUT VERY S  SIMPLER..........AND EVERYTGN IS UNDERSTOOD BY ANYONE AND ALSO PUT HINDI LAMGUAGE TRANALTOR SPEQCIFICALLY.,,,,,AND EMAIL IS MAHAVIRSECURITYSOLUTIONS@GMAIL.COM 
+CREATE EVERYHTIGN NOW DONOT MISS A SINGLE THINGS........
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://mahavirsecuritysolutions.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/4f9caa8c-23eb-40d5-a54f-a102e85f474a).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +25,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
