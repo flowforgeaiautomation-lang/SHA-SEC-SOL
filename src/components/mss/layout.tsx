@@ -4,7 +4,8 @@ import { ArrowUpRight, ArrowRight, ShieldCheck, Menu, X, MapPin, Mail, Globe2, C
 import { Button } from '@/components/ui/button';
 import { useSite } from './site-context';
 import { email, families, text } from '@/lib/mss/content';
-export function Logo(){const {t}=useSite();return <Link to="/" className="brand" aria-label={t(['MSS Security home','MSS सुरक्षा मुखपृष्ठ','MSS સુરક્ષા મુખ્ય પૃષ્ઠ'])}><span className="brand-mark"><ShieldCheck strokeWidth={1.5}/></span><span><strong>MSS<span className="brand-security"> {t(['SECURITY','सिक्योरिटी','સિક્યોરિટી'])}</span></strong><small>{t(['MAHAVIR SECURITY SOLUTION','महावीर सिक्योरिटी सॉल्यूशन','મહાવીર સિક્યોરિટી સોલ્યુશન'])}</small></span></Link>}
+import logo from '@/assets/mss-logo.png.asset.json';
+export function Logo(){const {t}=useSite();return <Link to="/" className="brand" aria-label={t(['MSS home','MSS मुखपृष्ठ','MSS મુખ્ય પૃષ્ઠ'])}><img src={logo.url} alt="MSS" width="768" height="768" className="mss-logo" fetchPriority="high"/></Link>}
 const nav=[['/industries',text.industries],['/how-it-works',text.how],['/about',text.about],['/careers',text.careers],['/contact',text.contact]] as const;
 export function Header(){const {t,lang,setLang}=useSite();const [open,setOpen]=useState(false);const [servicesOpen,setServicesOpen]=useState(false);const location=useLocation();return <>
  <div className="utility-bar"><div className="container utility-inner"><span><MapPin size={12}/>{t(['Based in Gujarat. Enquiries welcome from all over India and the world.','गुजरात में स्थित। पूरे भारत और दुनिया भर से पूछताछ का स्वागत है।','ગુજરાતમાં સ્થિત. સમગ્ર ભારત અને વિશ્વભરમાંથી પૂછપરછ આવકાર્ય છે.'])}</span><Link to="/trust">{t(['Built on responsibility. Guided by trust.','जिम्मेदारी की नींव। विश्वास का मार्ग।','જવાબદારીનો પાયો. વિશ્વાસનું માર્ગદર્શન.'])}<ArrowUpRight size={12}/></Link></div></div>
