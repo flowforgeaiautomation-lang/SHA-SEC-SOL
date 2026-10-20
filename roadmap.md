@@ -1,7 +1,7 @@
 # MSS delivery roadmap
 
 ## Master implementation order
-- [ ] Centered text-only MSS brand, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
+- [ ] Center supplied MSS image logo, add supplied quotation PDF, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
 - [ ] Planner first on homepage; preserve supplied planner copy and working calculations.
 - [ ] Real Pexels photography with secure credentials, cached assets and attribution.
 - [ ] Short global enquiry, international phone validation, career/complaint flows.
