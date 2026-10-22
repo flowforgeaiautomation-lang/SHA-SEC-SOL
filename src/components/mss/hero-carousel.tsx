@@ -38,7 +38,7 @@ export function HeroCarousel({ interval = 6000 }: { interval?: number }) {
     return () => window.clearTimeout(id);
   }, [i, paused, hover, reduced, interval, n]);
   const s = slides[i]!;
-  const cta = ([label, to, hash]: [Words, To, string?], variant: 'secondary' | 'heroOutline') => <Button asChild variant={variant}><Link to={to} hash={hash}>{t(label)}<ArrowUpRight /></Link></Button>;
+  const cta = ([label, to, hash]: [Words, To, string?], variant: 'secondary' | 'heroOutline') => <Button asChild variant={variant}><Link to={to} {...(hash ? { hash } : {})}>{t(label)}<ArrowUpRight /></Link></Button>;
   return (
     <section className="carousel" aria-roledescription="carousel" aria-label={t(['Highlights', 'मुख्य बातें', 'મુખ્ય બાબતો'])}
       onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onFocus={() => setHover(true)} onBlur={() => setHover(false)}
