@@ -27,6 +27,7 @@ import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as TechnologyRouteImport } from './routes/technology'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TrustRouteImport } from './routes/trust'
+import { Route as WelfareTrustRouteImport } from './routes/welfare-trust'
 import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as IndustriesIndustryRouteImport } from './routes/industries.$industry'
 import { Route as ServiceServiceRouteImport } from './routes/service.$service'
@@ -123,6 +124,11 @@ const TrustRoute = TrustRouteImport.update({
   path: '/trust',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WelfareTrustRoute = WelfareTrustRouteImport.update({
+  id: '/welfare-trust',
+  path: '/welfare-trust',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/industries/',
   path: '/industries/',
@@ -168,6 +174,7 @@ export interface FileRoutesByFullPath {
   '/technology': typeof TechnologyRoute
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
+  '/welfare-trust': typeof WelfareTrustRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -193,6 +200,7 @@ export interface FileRoutesByTo {
   '/technology': typeof TechnologyRoute
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
+  '/welfare-trust': typeof WelfareTrustRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -219,6 +227,7 @@ export interface FileRoutesById {
   '/technology': typeof TechnologyRoute
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
+  '/welfare-trust': typeof WelfareTrustRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -246,6 +255,7 @@ export interface FileRouteTypes {
     | '/technology'
     | '/terms'
     | '/trust'
+    | '/welfare-trust'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -271,6 +281,7 @@ export interface FileRouteTypes {
     | '/technology'
     | '/terms'
     | '/trust'
+    | '/welfare-trust'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -296,6 +307,7 @@ export interface FileRouteTypes {
     | '/technology'
     | '/terms'
     | '/trust'
+    | '/welfare-trust'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -322,6 +334,7 @@ export interface RootRouteChildren {
   TechnologyRoute: typeof TechnologyRoute
   TermsRoute: typeof TermsRoute
   TrustRoute: typeof TrustRoute
+  WelfareTrustRoute: typeof WelfareTrustRoute
   IndustriesIndustryRoute: typeof IndustriesIndustryRoute
   ServiceServiceRoute: typeof ServiceServiceRoute
   ServicesCategoryRoute: typeof ServicesCategoryRoute
@@ -457,6 +470,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TrustRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/welfare-trust': {
+      id: '/welfare-trust'
+      path: '/welfare-trust'
+      fullPath: '/welfare-trust'
+      preLoaderRoute: typeof WelfareTrustRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/industries/': {
       id: '/industries/'
       path: '/industries'
@@ -514,6 +534,7 @@ const rootRouteChildren: RootRouteChildren = {
   TechnologyRoute: TechnologyRoute,
   TermsRoute: TermsRoute,
   TrustRoute: TrustRoute,
+  WelfareTrustRoute: WelfareTrustRoute,
   IndustriesIndustryRoute: IndustriesIndustryRoute,
   ServiceServiceRoute: ServiceServiceRoute,
   ServicesCategoryRoute: ServicesCategoryRoute,
