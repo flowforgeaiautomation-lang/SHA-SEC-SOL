@@ -10,8 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AccessibilityRouteImport } from './routes/accessibility'
+import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ComplaintsRouteImport } from './routes/complaints'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -28,6 +30,7 @@ import { Route as TechnologyRouteImport } from './routes/technology'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TrustRouteImport } from './routes/trust'
 import { Route as WelfareTrustRouteImport } from './routes/welfare-trust'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as IndustriesIndustryRouteImport } from './routes/industries.$industry'
 import { Route as ServiceServiceRouteImport } from './routes/service.$service'
@@ -39,6 +42,10 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -47,6 +54,11 @@ const AboutRoute = AboutRouteImport.update({
 const AccessibilityRoute = AccessibilityRouteImport.update({
   id: '/accessibility',
   path: '/accessibility',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CareersRoute = CareersRouteImport.update({
@@ -129,6 +141,11 @@ const WelfareTrustRoute = WelfareTrustRouteImport.update({
   path: '/welfare-trust',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/industries/',
   path: '/industries/',
@@ -159,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/complaints': typeof ComplaintsRoute
   '/contact': typeof ContactRoute
@@ -175,6 +193,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -185,6 +204,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/complaints': typeof ComplaintsRoute
   '/contact': typeof ContactRoute
@@ -201,6 +221,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
+  '/admin': typeof AuthenticatedAdminRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -210,8 +231,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/about': typeof AboutRoute
   '/accessibility': typeof AccessibilityRoute
+  '/auth': typeof AuthRoute
   '/careers': typeof CareersRoute
   '/complaints': typeof ComplaintsRoute
   '/contact': typeof ContactRoute
@@ -228,6 +251,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -240,6 +264,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/accessibility'
+    | '/auth'
     | '/careers'
     | '/complaints'
     | '/contact'
@@ -256,6 +281,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/trust'
     | '/welfare-trust'
+    | '/admin'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -266,6 +292,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/accessibility'
+    | '/auth'
     | '/careers'
     | '/complaints'
     | '/contact'
@@ -282,6 +309,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/trust'
     | '/welfare-trust'
+    | '/admin'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -290,8 +318,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/about'
     | '/accessibility'
+    | '/auth'
     | '/careers'
     | '/complaints'
     | '/contact'
@@ -308,6 +338,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/trust'
     | '/welfare-trust'
+    | '/_authenticated/admin'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -317,8 +348,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AboutRoute: typeof AboutRoute
   AccessibilityRoute: typeof AccessibilityRoute
+  AuthRoute: typeof AuthRoute
   CareersRoute: typeof CareersRoute
   ComplaintsRoute: typeof ComplaintsRoute
   ContactRoute: typeof ContactRoute
@@ -351,6 +384,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -363,6 +403,13 @@ declare module '@tanstack/react-router' {
       path: '/accessibility'
       fullPath: '/accessibility'
       preLoaderRoute: typeof AccessibilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/careers': {
@@ -477,6 +524,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WelfareTrustRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/industries/': {
       id: '/industries/'
       path: '/industries'
@@ -515,10 +569,23 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AboutRoute: AboutRoute,
   AccessibilityRoute: AccessibilityRoute,
+  AuthRoute: AuthRoute,
   CareersRoute: CareersRoute,
   ComplaintsRoute: ComplaintsRoute,
   ContactRoute: ContactRoute,
