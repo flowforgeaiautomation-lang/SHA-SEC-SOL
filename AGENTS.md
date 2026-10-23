@@ -14,3 +14,4 @@
 - Keep enquiry intake server-side with validation, honeypot, durable contact throttling and idempotency; browser roles cannot read or write private enquiry records.
 - Use the single deterministic daily coverage engine for planner views; requested coverage is not an approved workforce schedule.
 - Record unimplemented enterprise phases and launch blockers in roadmap.md rather than presenting simulated controls as operational.
+- Keep private enquiry management under the authenticated layout, with independent server-side admin role checks and user-scoped RLS queries; exports must neutralise spreadsheet formulas to protect staff.
