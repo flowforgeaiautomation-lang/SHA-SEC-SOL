@@ -1,6 +1,7 @@
 # MSS delivery roadmap
 
 ## Master implementation order
+- [ ] Current completion pass: reconcile both briefs, restore premium simple presentation, finish private enquiry tools and verify public journeys.
 - [ ] Center supplied MSS image logo, add supplied quotation PDF, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
 - [ ] Planner first on homepage; preserve supplied planner copy and working calculations.
 - [ ] Real Pexels photography with secure credentials, cached assets and attribution.
