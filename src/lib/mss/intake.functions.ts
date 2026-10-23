@@ -12,7 +12,7 @@ export const submitEnquiry = createServerFn({method:'POST'}).inputValidator((inp
  if(countError) throw new Error('Unable to record enquiry. Please try again.');
  if((count??0)>=5) throw new Error('Too many requests. Please try again later.');
  const reference = `MSS-${new Date().getUTCFullYear()}-${crypto.randomUUID().slice(0,8).toUpperCase()}`;
- const {error} = await supabaseAdmin.from('enquiries').insert({reference,submission_key:data.key,kind:data.kind,name:data.name,phone:data.phone,email:data.email||null,city:data.city,language:data.language,details:JSON.parse(data.details),contact_hash:hash});
+ const {error} = await supabaseAdmin.from('enquiries').insert({reference,submission_key:data.key,kind:data.kind,name:data.name,phone:data.phone,email:data.email||null,city:data.city,language:data.language,details:JSON.parse(data.details),contact_hash:hash,status:'New'});
  if(error?.code==='23505'){const {data:record}=await supabaseAdmin.from('enquiries').select('reference').eq('submission_key',data.key).maybeSingle();if(record)return {reference:record.reference};}
  if(error) throw new Error('Unable to record enquiry. Please try again.');
  return {reference};
