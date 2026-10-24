@@ -1,7 +1,7 @@
 # MSS delivery roadmap
 
 ## Master implementation order
-- [ ] Current completion pass: reconcile both briefs, restore premium simple presentation, finish private enquiry tools and verify public journeys.
+- [ ] Current completion pass: reconcile all uploaded briefs, restore premium navy/gold full-colour presentation and centered MSS logo, activate six-slide homepage carousel, add dedicated employment/training/partnership/support/impact pathways, extend secure administration and verify public journeys.
 - [ ] Newly attached briefs: confirm visible homepage carousel, welfare navigation and a working /index entry; audit added requirements.
 - [ ] Center supplied MSS image logo, add supplied quotation PDF, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
 - [ ] Planner first on homepage; preserve supplied planner copy and working calculations.
