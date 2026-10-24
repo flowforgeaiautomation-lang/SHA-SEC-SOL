@@ -14,6 +14,100 @@ export type Database = {
   }
   public: {
     Tables: {
+      application_history: {
+        Row: {
+          application_id: string
+          created_at: string
+          id: string
+          status: string
+        }
+        Insert: {
+          application_id: string
+          created_at?: string
+          id?: string
+          status: string
+        }
+        Update: {
+          application_id?: string
+          created_at?: string
+          id?: string
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_history_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      applications: {
+        Row: {
+          candidate_note: string
+          created_at: string
+          id: string
+          interview_at: string | null
+          staff_notes: string
+          status: string
+          updated_at: string
+          user_id: string
+          vacancy_id: string
+        }
+        Insert: {
+          candidate_note?: string
+          created_at?: string
+          id?: string
+          interview_at?: string | null
+          staff_notes?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+          vacancy_id: string
+        }
+        Update: {
+          candidate_note?: string
+          created_at?: string
+          id?: string
+          interview_at?: string | null
+          staff_notes?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+          vacancy_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "applications_vacancy_id_fkey"
+            columns: ["vacancy_id"]
+            isOneToOne: false
+            referencedRelation: "vacancies"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      content_history: {
+        Row: {
+          actor_id: string | null
+          content_key: string
+          created_at: string
+          id: string
+        }
+        Insert: {
+          actor_id?: string | null
+          content_key: string
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          actor_id?: string | null
+          content_key?: string
+          created_at?: string
+          id?: string
+        }
+        Relationships: []
+      }
       enquiries: {
         Row: {
           city: string
@@ -109,6 +203,81 @@ export type Database = {
           },
         ]
       }
+      profiles: {
+        Row: {
+          accommodation: string
+          availability: string
+          consent_at: string | null
+          experience: string
+          full_name: string
+          id: string
+          job_categories: string
+          location: string
+          permissions_confirmed: boolean
+          phone: string
+          preferred_locations: string
+          qualifications: string
+          serving_personnel: boolean
+          skills: string
+          training_interests: string
+          updated_at: string
+        }
+        Insert: {
+          accommodation?: string
+          availability?: string
+          consent_at?: string | null
+          experience?: string
+          full_name?: string
+          id: string
+          job_categories?: string
+          location?: string
+          permissions_confirmed?: boolean
+          phone?: string
+          preferred_locations?: string
+          qualifications?: string
+          serving_personnel?: boolean
+          skills?: string
+          training_interests?: string
+          updated_at?: string
+        }
+        Update: {
+          accommodation?: string
+          availability?: string
+          consent_at?: string | null
+          experience?: string
+          full_name?: string
+          id?: string
+          job_categories?: string
+          location?: string
+          permissions_confirmed?: boolean
+          phone?: string
+          preferred_locations?: string
+          qualifications?: string
+          serving_personnel?: boolean
+          skills?: string
+          training_interests?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      site_content: {
+        Row: {
+          key: string
+          updated_at: string
+          value: Json
+        }
+        Insert: {
+          key: string
+          updated_at?: string
+          value: Json
+        }
+        Update: {
+          key?: string
+          updated_at?: string
+          value?: Json
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
@@ -124,6 +293,63 @@ export type Database = {
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
           user_id?: string
+        }
+        Relationships: []
+      }
+      vacancies: {
+        Row: {
+          benefits: string
+          created_at: string
+          deadline: string | null
+          eligibility: string
+          employer: string
+          hours: string
+          id: string
+          job_type: string
+          location: string
+          qualifications: string
+          responsibilities: string
+          salary: string
+          status: string
+          title: string
+          updated_at: string
+          verified: boolean
+        }
+        Insert: {
+          benefits?: string
+          created_at?: string
+          deadline?: string | null
+          eligibility?: string
+          employer: string
+          hours?: string
+          id?: string
+          job_type?: string
+          location: string
+          qualifications?: string
+          responsibilities?: string
+          salary?: string
+          status?: string
+          title: string
+          updated_at?: string
+          verified?: boolean
+        }
+        Update: {
+          benefits?: string
+          created_at?: string
+          deadline?: string | null
+          eligibility?: string
+          employer?: string
+          hours?: string
+          id?: string
+          job_type?: string
+          location?: string
+          qualifications?: string
+          responsibilities?: string
+          salary?: string
+          status?: string
+          title?: string
+          updated_at?: string
+          verified?: boolean
         }
         Relationships: []
       }
