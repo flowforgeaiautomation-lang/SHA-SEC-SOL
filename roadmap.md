@@ -1,6 +1,7 @@
 # MSS delivery roadmap
 
 ## Master implementation order
+- [ ] October 25 premium completion: exact navy/gold/ivory/Inter design, transparent supplied logo, founder-only story, honest ex-service recruitment, remove source clutter and internal statuses, repair navigation menus, verify all public routes/forms/planner at desktop/tablet/mobile.
 - [ ] Current completion pass: reconcile all uploaded briefs, restore premium navy/gold full-colour presentation and centered MSS logo, activate six-slide homepage carousel, add dedicated employment/training/partnership/support/impact pathways, extend secure administration and verify public journeys.
 - [ ] Newly attached briefs: confirm visible homepage carousel, welfare navigation and a working /index entry; audit added requirements.
 - [ ] Center supplied MSS image logo, add supplied quotation PDF, black/white design, simplified pages, remove Gujarat wording and repeated PSARA banner.
