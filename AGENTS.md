@@ -17,3 +17,4 @@
 - Use the single deterministic daily coverage engine for planner views; requested coverage is not an approved workforce schedule.
 - Record unimplemented enterprise phases and launch blockers in roadmap.md rather than presenting simulated controls as operational.
 - Keep private enquiry management under the authenticated layout, with independent server-side admin role checks and user-scoped RLS queries; exports must neutralise spreadsheet formulas to protect staff.
+- Keep vite.config.ts on @lovable.dev/vite-tanstack-config; replacing it with raw plugins broke every page (404s).
