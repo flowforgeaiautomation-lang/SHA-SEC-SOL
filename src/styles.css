@@ -66,3 +66,7 @@ h1,h2,h3,h4{font-weight:700} .site-header,.site-footer{background:var(--primary)
 .site-header.over-hero ~ main .carousel .hero-content{padding-top:150px}
 .site-header.over-hero ~ main .carousel .hero-image{object-fit:cover;object-position:center 30%}
 .site-header.over-hero ~ main .carousel::after,.site-header.over-hero ~ main .hero::after{background:linear-gradient(90deg,rgb(0 0 0 / .5) 0%,rgb(0 0 0 / .15) 55%,transparent 100%)}
+.site-header.over-hero ~ main .carousel .carousel-content{padding-top:170px}
+.site-header.over-hero ~ main .carousel .carousel-shade{background:linear-gradient(90deg,rgb(0 0 0 / .55) 0%,rgb(0 0 0 / .2) 50%,transparent 80%)}
+.site-header.over-hero ~ main .carousel::after{display:none}
+@media(max-width:700px){.site-header.over-hero ~ main .carousel .carousel-content{padding-top:120px}}
