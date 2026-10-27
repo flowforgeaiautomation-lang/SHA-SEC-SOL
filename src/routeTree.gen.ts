@@ -31,6 +31,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as TrustRouteImport } from './routes/trust'
 import { Route as WelfareTrustRouteImport } from './routes/welfare-trust'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
+import { Route as AuthenticatedGithubGuideRouteImport } from './routes/_authenticated/github-guide'
 import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as IndustriesIndustryRouteImport } from './routes/industries.$industry'
 import { Route as ServiceServiceRouteImport } from './routes/service.$service'
@@ -146,6 +147,12 @@ const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedGithubGuideRoute =
+  AuthenticatedGithubGuideRouteImport.update({
+    id: '/github-guide',
+    path: '/github-guide',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
   id: '/industries/',
   path: '/industries/',
@@ -194,6 +201,7 @@ export interface FileRoutesByFullPath {
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
   '/admin': typeof AuthenticatedAdminRoute
+  '/github-guide': typeof AuthenticatedGithubGuideRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -222,6 +230,7 @@ export interface FileRoutesByTo {
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
   '/admin': typeof AuthenticatedAdminRoute
+  '/github-guide': typeof AuthenticatedGithubGuideRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -252,6 +261,7 @@ export interface FileRoutesById {
   '/trust': typeof TrustRoute
   '/welfare-trust': typeof WelfareTrustRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRoute
+  '/_authenticated/github-guide': typeof AuthenticatedGithubGuideRoute
   '/industries/$industry': typeof IndustriesIndustryRoute
   '/service/$service': typeof ServiceServiceRoute
   '/services/$category': typeof ServicesCategoryRoute
@@ -282,6 +292,7 @@ export interface FileRouteTypes {
     | '/trust'
     | '/welfare-trust'
     | '/admin'
+    | '/github-guide'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -310,6 +321,7 @@ export interface FileRouteTypes {
     | '/trust'
     | '/welfare-trust'
     | '/admin'
+    | '/github-guide'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -339,6 +351,7 @@ export interface FileRouteTypes {
     | '/trust'
     | '/welfare-trust'
     | '/_authenticated/admin'
+    | '/_authenticated/github-guide'
     | '/industries/$industry'
     | '/service/$service'
     | '/services/$category'
@@ -531,6 +544,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/github-guide': {
+      id: '/_authenticated/github-guide'
+      path: '/github-guide'
+      fullPath: '/github-guide'
+      preLoaderRoute: typeof AuthenticatedGithubGuideRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/industries/': {
       id: '/industries/'
       path: '/industries'
@@ -571,10 +591,12 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAdminRoute: typeof AuthenticatedAdminRoute
+  AuthenticatedGithubGuideRoute: typeof AuthenticatedGithubGuideRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAdminRoute: AuthenticatedAdminRoute,
+  AuthenticatedGithubGuideRoute: AuthenticatedGithubGuideRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
