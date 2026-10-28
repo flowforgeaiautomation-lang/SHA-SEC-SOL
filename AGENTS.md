@@ -18,4 +18,4 @@
 - Record unimplemented enterprise phases and launch blockers in roadmap.md rather than presenting simulated controls as operational.
 - Keep private enquiry management under the authenticated layout, with independent server-side admin role checks and user-scoped RLS queries; exports must neutralise spreadsheet formulas to protect staff.
 - Keep vite.config.ts on @lovable.dev/vite-tanstack-config; replacing it with raw plugins broke every page (404s).
-- Keep root wrangler.jsonc pointing at dist/server (no_bundle) with its own build command; without it Cloudflare's auto-setup tries to rewrite vite.config.ts and fails.
+- Keep root wrangler.jsonc pointing at .output/server/index.mjs and .output/public (no_bundle, own build command that deletes .wrangler/deploy); outside Lovable the build writes to .output, and without this file Cloudflare tries to rewrite vite.config.ts.
