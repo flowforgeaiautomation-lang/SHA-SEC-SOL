@@ -25,3 +25,12 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+
+## Visible website update — 28 October 2026
+
+**Release marker: `2026.10.28-r1`**
+
+The footer on every public page displays `MSS · 2026.10.28-r1`. After deploying this revision, scroll to the footer to confirm that the latest website is being served. This marker confirms website content, not deployment success.
+
+If this section is missing from the repository, check Project settings → Git for the connected repository, synced branch, and sync status. Lovable manages repository commits; deployment results must be checked separately in Cloudflare.
