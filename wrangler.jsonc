@@ -1,12 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "sha-sec-sol",
-  "main": "dist/server/index.mjs",
+  // Cloudflare builds outside Lovable, where the build writes to .output (not dist).
+  "main": ".output/server/index.mjs",
   "no_bundle": true,
   "rules": [{ "type": "ESModule", "globs": ["**/*.mjs", "**/*.js"] }],
-  "build": { "command": "bun run build && rm -rf .wrangler/deploy" },
+  "build": { "command": "rm -rf .output dist && bun run build && rm -rf .wrangler/deploy" },
   "compatibility_date": "2025-09-01",
   "compatibility_flags": ["nodejs_compat"],
-  "assets": { "binding": "ASSETS", "directory": "dist/client" },
+  "assets": { "binding": "ASSETS", "directory": ".output/public" },
   "observability": { "enabled": true }
 }
