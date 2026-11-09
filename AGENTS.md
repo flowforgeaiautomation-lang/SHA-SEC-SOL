@@ -19,3 +19,4 @@
 - Keep private enquiry management under the authenticated layout, with independent server-side admin role checks and user-scoped RLS queries; exports must neutralise spreadsheet formulas to protect staff.
 - Keep vite.config.ts on @lovable.dev/vite-tanstack-config; replacing it with raw plugins broke every page (404s).
 - Keep root wrangler.jsonc pointing at .output/server/index.mjs and .output/public (no_bundle, own build command that deletes .wrangler/deploy); outside Lovable the build writes to .output, and without this file Cloudflare tries to rewrite vite.config.ts.
+- Bundle site images, logo and PDFs as local files (src/assets imports or public/), never /__l5e asset URLs; those only exist on Lovable hosting and broke images on Cloudflare.

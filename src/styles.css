@@ -70,3 +70,6 @@ h1,h2,h3,h4{font-weight:700} .site-header,.site-footer{background:var(--primary)
 .site-header.over-hero ~ main .carousel .carousel-shade{background:linear-gradient(90deg,rgb(0 0 0 / .55) 0%,rgb(0 0 0 / .2) 50%,transparent 80%)}
 .site-header.over-hero ~ main .carousel::after{display:none}
 @media(max-width:700px){.site-header.over-hero ~ main .carousel .carousel-content{padding-top:120px}}
+
+/* Brand fallback for images that fail to load */
+img.img-failed{color:transparent;background:linear-gradient(135deg,var(--color-primary,#0B1F33),#16324f);min-height:120px;object-position:-9999px}

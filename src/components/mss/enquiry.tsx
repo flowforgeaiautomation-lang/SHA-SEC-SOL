@@ -7,7 +7,7 @@ import { useSite } from './site-context';
 import { text, email, type Words } from '@/lib/mss/content';
 import { submitEnquiry } from '@/lib/mss/intake.functions';
 import { phoneSchema } from '@/lib/mss/enquiry-schema';
-import quotation from '@/assets/mss-security-quotation.pdf.asset.json';
+const quotation={url:'/mss-security-quotation.pdf'};
 import { ContactActions } from './contact-actions';
 type Kind='quote'|'contact'|'career'|'complaint'|'partner'|'support';
 type FormValues = Record<string,string> & {name:string;phone:string;email:string;city:string;type:string;country:string;state:string;guards:string;duty:string;organisation:string;message:string;website:string;role:string;experience:string;reference:string};
