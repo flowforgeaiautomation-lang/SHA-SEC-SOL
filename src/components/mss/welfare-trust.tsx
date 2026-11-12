@@ -5,8 +5,8 @@ import { useSite } from './site-context';
 import type { Words } from '@/lib/mss/content';
 import { PageHeading } from './pages';
 import { Enquiry } from './enquiry';
-import training from '@/assets/slide-training.jpg';
-import veteran from '@/assets/slide-veteran.jpg';
+import training from '@/assets/slide-training.webp';
+import veteran from '@/assets/slide-veteran.webp';
 
 const values: Words[] = [
   ['Dignity and respect', 'गरिमा और सम्मान', 'ગૌરવ અને સન્માન'], ['Fairness and equal opportunity', 'निष्पक्षता और समान अवसर', 'ન્યાય અને સમાન તક'], ['Responsible service', 'ज़िम्मेदार सेवा', 'જવાબદાર સેવા'], ['Transparency and accountability', 'पारदर्शिता और जवाबदेही', 'પારદર્શિતા અને જવાબદારી'], ['Professional development', 'पेशेवर विकास', 'વ્યાવસાયિક વિકાસ'], ['Ethical recruitment', 'नैतिक भर्ती', 'નૈતિક ભરતી'], ['Privacy and safeguarding', 'गोपनीयता और सुरक्षा', 'ગોપનીયતા અને સુરક્ષા'], ['Measurable social impact', 'मापने योग्य सामाजिक प्रभाव', 'માપી શકાય તેવો સામાજિક પ્રભાવ'], ['Financial integrity', 'वित्तीय ईमानदारी', 'નાણાકીય પ્રામાણિકતા'], ['Sustainable employment', 'टिकाऊ रोज़गार', 'ટકાઉ રોજગાર'],

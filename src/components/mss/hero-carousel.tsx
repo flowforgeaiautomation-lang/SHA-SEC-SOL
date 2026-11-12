@@ -4,10 +4,10 @@ import { ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-rea
 import { Button } from '@/components/ui/button';
 import { useSite } from './site-context';
 import type { Words } from '@/lib/mss/content';
-import security from '@/assets/slide-security.jpg';
-import veteran from '@/assets/slide-veteran.jpg';
-import recruitment from '@/assets/slide-recruitment.jpg';
-import training from '@/assets/slide-training.jpg';
+import security from '@/assets/slide-security.webp';
+import veteran from '@/assets/slide-veteran.webp';
+import recruitment from '@/assets/slide-recruitment.webp';
+import training from '@/assets/slide-training.webp';
 import { photos } from '@/lib/mss/photos';
 
 type To = '/services' | '/request-quote' | '/welfare-trust' | '/careers';
