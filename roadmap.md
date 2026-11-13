@@ -20,4 +20,6 @@
 - [x] Verified quote recording through UI and stored record, service/about/industry/policy routes, Hindi/Gujarati selection, mobile navigation and planner layout, coverage gaps and public enquiry-read isolation. No runtime errors in tested flow.
 - [ ] Internal CRM, contracts, workforce, finance, intelligence and expansion phases: not implemented; require separate staged implementation and company-approved workflows, permissions, legal/commercial configuration.
 - [ ] Launch approvals: genuine contact/address/registration details, PSARA authorisation, reviewed legal/translation text, verified service capacity and leadership photos await company supply.
+- [x] Enquiry form saves on every host (fixed missing private key on Cloudflare); Google Tag Manager GTM-5KJDVJVH installed once on all pages.
+- [ ] Google Analytics: must be configured inside the user's Google Tag Manager account.
 - [ ] Outgoing email: requires a verified sender domain; Gmail is contact-only.

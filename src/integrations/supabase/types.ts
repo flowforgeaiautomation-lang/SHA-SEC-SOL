@@ -365,6 +365,19 @@ export type Database = {
         }
         Returns: boolean
       }
+      submit_enquiry: {
+        Args: {
+          p_city: string
+          p_details: Json
+          p_email: string
+          p_key: string
+          p_kind: string
+          p_language: string
+          p_name: string
+          p_phone: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       app_role: "admin"

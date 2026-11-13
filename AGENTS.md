@@ -13,7 +13,8 @@
 - Keep public MSS pages in TanStack file routes with shared site layout and central multilingual content; this preserves consistent navigation and language rendering.
 - Use shared semantic CSS tokens for all public page styling and portal-based accessible menus for navigation; this keeps branding consistent and prevents clipping and keyboard traps.
 - Preserve the supplied logo monogram using transparent light/dark asset variants; this maintains artwork identity and contrast across site surfaces.
-- Keep enquiry intake server-side with validation, honeypot, durable contact throttling and idempotency; browser roles cannot read or write private enquiry records.
+- Keep enquiry intake server-side with validation and honeypot, saving through the security-definer submit_enquiry database function (throttling + idempotency) with only the public URL/publishable key; this keeps intake working on hosts without private keys (Cloudflare) and browser roles still cannot read enquiry records.
+- Load Google Tag Manager once from the root route head (script) and body (noscript); never add a second copy elsewhere.
 - Use the single deterministic daily coverage engine for planner views; requested coverage is not an approved workforce schedule.
 - Record unimplemented enterprise phases and launch blockers in roadmap.md rather than presenting simulated controls as operational.
 - Keep private enquiry management under the authenticated layout, with independent server-side admin role checks and user-scoped RLS queries; exports must neutralise spreadsheet formulas to protect staff.

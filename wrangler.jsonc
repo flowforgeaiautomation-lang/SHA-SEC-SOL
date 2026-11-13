@@ -9,5 +9,10 @@
   "compatibility_date": "2025-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "assets": { "binding": "ASSETS", "directory": ".output/public" },
+  // Public (non-secret) backend address and publishable key, needed by server code on Cloudflare.
+  "vars": {
+    "SUPABASE_URL": "https://c--4f9caa8c-23eb-40d5-a54f-a102e85f474a-prod.lovable.cloud",
+    "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_ucQJYOBCztnul23U0JRzkQ_mFzu2ZLA"
+  },
   "observability": { "enabled": true }
 }

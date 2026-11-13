@@ -22,6 +22,13 @@
       "when": 1792824850986,
       "tag": "0002_candidate_portal_and_verified_vacancies",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794579373430,
+      "tag": "0003_public_enquiry_intake_function",
+      "breakpoints": true
     }
   ]
 }
